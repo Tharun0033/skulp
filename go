@@ -7,8 +7,9 @@ import (
 )
 
 func main() {
-	// Print Hello, World!
 	fmt.Println("Hello, World!")
+	fmt.Println("Thrun")
+
 
 	// Get Go dependencies using `go list -m all`
 	cmd := exec.Command("go", "list", "-m", "all")
