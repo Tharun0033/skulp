@@ -1,34 +1,21 @@
-# Hello world with Java :coffee:
+[![Build Status](https://travis-ci.org/DEV3L/mvn-hello-world-web-app.png)](https://travis-ci.org/DEV3L/mvn-hello-world-web-app)
 
-This is a simple **"Hello world"** done with **Java** programming language.
+# mvn-hello-world-web-app
+Java Hello World web application created using maven-archetype-webapp
 
-## Source code
+## Blog Post Reference
+https://softwaredev3loper.wordpress.com/2016/02/17/from-zero-to-continuous-delivery/
 
-This is the source code of the program:
+## Dependancies
+* git
+* maven
+* tomcat
 
-```java
-public class HelloWorld {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
-}
-```
-
-Notice that `System.out.println("Hello world!");` shows the string `"Hello world!"` on the screen.
-
-## Compile program
-
-To compile the "Hello World" program, type the following:
-
-```console
-javac HelloWorld.java
-```
-
-## Excute the program
-
-To execute the program, type this:
-
-```console
-java HelloWorld
-```
-
+## Eclipse Project setup
+* Use git clone to pull project into workspace directory
+ * git clone https://github.com/DEV3L/mvn-hello-world-web-app.git
+* Use maven to resolve Eclipse dependencies
+ * mvn eclipse:eclipse
+* Import 'mvn-hello-world-web-app' as existing project into Eclipse 
+* Use maven to run integration tests and install
+ * mvn clean install
