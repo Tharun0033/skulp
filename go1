@@ -1,0 +1,37 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	// Define the content of the Ansible playbook
+	ansiblePlaybook := `---
+- name: Deploy web server
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Start Nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+`
+	// Define the file name
+	fileName := "playbook.yml"
+
+	// Create and write to the file
+	err := os.WriteFile(fileName, []byte(ansiblePlaybook), 0644)
+	if err != nil {
+		fmt.Println("Error creating Ansible file:", err)
+		return
+	}
+
+	fmt.Println("Ansible playbook created successfully:", fileName)
+}
